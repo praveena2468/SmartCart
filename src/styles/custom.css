@@ -1,0 +1,350 @@
+/* SmartMart Custom Styling System - Deep Magenta & Coral Modern Indian E-Commerce Palette */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+:root {
+  /* Brand Primary & Secondary Colors */
+  --sm-primary: #D81B60; /* Deep Magenta / Raspberry */
+  --sm-primary-hover: #C2185B;
+  --sm-primary-light: #FCE4EC;
+  --sm-secondary: #FF6F61; /* Coral / Orange */
+  --sm-secondary-hover: #E65A4C;
+  --sm-secondary-light: #FFF0EE;
+  --sm-accent: #FFC107; /* Warm Yellow */
+  --sm-accent-light: #FFF8E1;
+
+  /* Neutrals */
+  --sm-dark: #111827; /* Near Black */
+  --sm-dark-card: #1F2937;
+  --sm-gray-600: #4B5563;
+  --sm-gray-500: #6B7280;
+  --sm-gray-400: #9CA3AF;
+  --sm-gray-300: #D1D5DB;
+  --sm-gray-200: #E5E7EB;
+  --sm-light-bg: #FAFAFA;
+  --sm-light-card: #FFFFFF;
+  
+  /* Status Colors */
+  --sm-success: #10B981;
+  --sm-success-light: #E6F4EA;
+  --sm-danger: #EF4444;
+  --sm-info: #0EA5E9;
+
+  /* Typography */
+  --sm-font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --sm-font-heading: 'Outfit', sans-serif;
+}
+
+body {
+  font-family: var(--sm-font-main);
+  background-color: var(--sm-light-bg);
+  color: var(--sm-dark);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--sm-font-heading);
+  font-weight: 700;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sm-primary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sm-primary-hover);
+}
+
+/* Custom Buttons */
+.btn-smartmart-primary {
+  background-color: var(--sm-primary);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(216, 27, 96, 0.2);
+}
+.btn-smartmart-primary:hover, .btn-smartmart-primary:focus {
+  background-color: var(--sm-primary-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(216, 27, 96, 0.3);
+}
+
+.btn-smartmart-secondary {
+  background-color: var(--sm-secondary);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(255, 111, 97, 0.2);
+}
+.btn-smartmart-secondary:hover, .btn-smartmart-secondary:focus {
+  background-color: var(--sm-secondary-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255, 111, 97, 0.3);
+}
+
+.btn-smartmart-outline {
+  background-color: transparent;
+  color: var(--sm-primary);
+  border: 1.5px solid var(--sm-primary);
+  font-weight: 600;
+  padding: 0.45rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+.btn-smartmart-outline:hover {
+  background-color: var(--sm-primary-light);
+  color: var(--sm-primary-hover);
+  border-color: var(--sm-primary-hover);
+}
+
+.btn-smartmart-accent {
+  background-color: var(--sm-accent);
+  color: var(--sm-dark);
+  border: none;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+.btn-smartmart-accent:hover {
+  background-color: #ffb300;
+  color: var(--sm-dark);
+}
+
+/* SmartMart Badges */
+.badge-smartmart-primary {
+  background-color: var(--sm-primary-light);
+  color: var(--sm-primary);
+  font-weight: 700;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+}
+
+.badge-smartmart-offer {
+  background-color: var(--sm-secondary);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.badge-smart-score {
+  background: linear-gradient(135deg, var(--sm-primary) 0%, var(--sm-secondary) 100%);
+  color: #ffffff;
+  font-weight: 800;
+  padding: 0.4rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 8px rgba(216, 27, 96, 0.25);
+}
+
+.badge-winner {
+  background-color: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #F59E0B;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Card Styling */
+.sm-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--sm-gray-200);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.sm-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.07);
+  border-color: rgba(216, 27, 96, 0.3);
+}
+
+/* Image Fit */
+.sm-product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  padding: 0.75rem;
+  transition: transform 0.3s ease;
+}
+.sm-card:hover .sm-product-img {
+  transform: scale(1.04);
+}
+
+/* Price Styling */
+.sm-price-current {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--sm-dark);
+}
+
+.sm-price-mrp {
+  font-size: 0.875rem;
+  color: var(--sm-gray-500);
+  text-decoration: line-through;
+  margin-left: 0.4rem;
+}
+
+.sm-price-discount {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--sm-secondary);
+  margin-left: 0.4rem;
+}
+
+.sm-price-unit {
+  font-size: 0.75rem;
+  color: var(--sm-gray-500);
+}
+
+/* Quick View Overlay Button */
+.sm-quick-view-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+.sm-card:hover .sm-quick-view-btn {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Compare Score Bars */
+.score-bar-bg {
+  height: 8px;
+  background-color: var(--sm-gray-200);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.score-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--sm-primary), var(--sm-secondary));
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+/* Scanner Animation */
+.scanner-container {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 280px;
+  background-color: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.scanner-laser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--sm-primary);
+  box-shadow: 0 0 15px 3px var(--sm-primary);
+  animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+  0% { top: 5%; }
+  50% { top: 90%; }
+  100% { top: 5%; }
+}
+
+/* Smart Supermarket Cart Layout */
+.store-cart-tablet-view {
+  background: #0f172a;
+  color: #f8fafc;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+.store-cart-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+/* Custom Navigation active state */
+.nav-link-smartmart {
+  color: var(--sm-dark);
+  font-weight: 600;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.nav-link-smartmart:hover, .nav-link-smartmart.active {
+  color: var(--sm-primary);
+  background-color: var(--sm-primary-light);
+}
+
+/* Footer Links */
+.footer-link {
+  color: var(--sm-gray-400);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-link:hover {
+  color: var(--sm-primary);
+}
+
+/* Admin Styling */
+.admin-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background-color: #111827;
+  color: #9CA3AF;
+}
+.admin-sidebar .nav-link {
+  color: #9CA3AF;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+.admin-sidebar .nav-link:hover, .admin-sidebar .nav-link.active {
+  color: #FFFFFF;
+  background-color: var(--sm-primary);
+}
+
+/* Toast Container Floating */
+.toast-container-smartmart {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1090;
+}
